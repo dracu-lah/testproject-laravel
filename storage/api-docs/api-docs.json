@@ -7,16 +7,14 @@
     },
     "servers": [
         {
-            "url": "http://localhost:8000",
+            "url": "https://testlarvel.udhost.in",
             "description": "Localhost API Server"
         }
     ],
     "paths": {
         "/api/hello": {
             "get": {
-                "tags": [
-                    "Hello"
-                ],
+                "tags": ["Hello"],
                 "summary": "Returns a hello message",
                 "operationId": "140551e528d47f47b5c1460e5a530ed5",
                 "responses": {
@@ -47,3 +45,4 @@
         }
     ]
 }
+
