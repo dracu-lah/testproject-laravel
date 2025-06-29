@@ -13,8 +13,16 @@ namespace App\Swagger;
  *     url=L5_SWAGGER_CONST_HOST,
  *     description="Localhost API Server"
  * )
+ *
+ *
+ * @OA\SecurityScheme(
+ *     securityScheme="bearerAuth",
+ *     type="http",
+ *     scheme="bearer",
+ *     bearerFormat="JWT"
+ * )
  */
 class SwaggerController
 {
-    // This is just a holder for annotations
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
