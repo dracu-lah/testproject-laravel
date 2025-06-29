@@ -1,0 +1,49 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Hello API",
+        "description": "Simple Hello World JSON API with Swagger in Laravel",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000",
+            "description": "Localhost API Server"
+        }
+    ],
+    "paths": {
+        "/api/hello": {
+            "get": {
+                "tags": [
+                    "Hello"
+                ],
+                "summary": "Returns a hello message",
+                "operationId": "140551e528d47f47b5c1460e5a530ed5",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Hello, World!"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Hello",
+            "description": "Hello"
+        }
+    ]
+}
