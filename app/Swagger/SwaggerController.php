@@ -2,6 +2,10 @@
 
 namespace App\Swagger;
 
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+
 /**
  * @OA\Info(
  *     title="Hello API",
@@ -14,15 +18,10 @@ namespace App\Swagger;
  *     description="Localhost API Server"
  * )
  *
- *
- * @OA\SecurityScheme(
- *     securityScheme="bearerAuth",
- *     type="http",
- *     scheme="bearer",
- *     bearerFormat="JWT"
- * )
  */
 class SwaggerController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    use AuthorizesRequests;
+    use DispatchesJobs;
+    use ValidatesRequests;
 }
